@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Austin Artistic Dental — Specialized Dentistry</title>
+    <meta
+      name="description"
+      content="Austin Artistic Dental — Specialized dentistry, dental implants, clear aligners, and cosmetic oral care in Austin, Texas."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#111111",
+              paper: "#FFFFFF",
+              cream: "#F8F9FA",
+              mist: "#F1F3F5",
+              soft: "#E9ECEF",
+              muted: "#6B7280",
+              line: "#E5E7EB",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+            letterSpacing: {
+              ultra: "0.35em",
+              tight2: "-0.04em",
+            },
+          },
+        },
+      };
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  </head>
+  <body class="bg-paper text-ink antialiased">
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-50 mix-blend-difference">
+      <div
+        class="flex items-center justify-between px-6 md:px-10 lg:px-14 pt-6 md:pt-8"
+      >
+        <a
+          href="#home"
+          class="site-logo flex items-center"
+          aria-label="Austin Artistic Dental"
+        >
+          <img
+            src="assets/others/logo.png"
+            alt="Austin Artistic Dental"
+            class="site-logo-img"
+          />
+        </a>
+
+        <div class="button-con flex">
+          <a
+            href="https://app.smilevirtual.com/dr-jarett-hulse"
+            class="appointment-link"
+            aria-label="Call the clinic to make an appointment"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="#222" class="appointment-icon" aria-hidden="true">
+            <!-- Main Calendar Body -->
+            <rect x="8" y="28" width="84" height="64" rx="4" ry="4" fill="#5d5c66"/>
+            
+            <!-- Top Tabs (Rings) -->
+            <rect x="17" y="15" width="10" height="16" rx="4" ry="4" fill="#5d5c66"/>
+            <rect x="73" y="15" width="10" height="16" rx="4" ry="4" fill="#5d5c66"/>
+            
+            <!-- Calendar Grid (White Squares) -->
+            <!-- Top Row -->
+            <rect x="14" y="36" width="14" height="13" rx="2" ry="2" fill="#ffffff"/>
+            <rect x="32" y="36" width="14" height="13" rx="2" ry="2" fill="#ffffff"/>
+            <rect x="52" y="36" width="14" height="13" rx="2" ry="2" fill="#ffffff"/>
+            <rect x="72" y="36" width="14" height="13" rx="2" ry="2" fill="#ffffff"/>
+            
+            <!-- Middle Row -->
+            <rect x="52" y="54" width="14" height="13" rx="2" ry="2" fill="#ffffff"/>
+            <rect x="72" y="54" width="14" height="13" rx="2" ry="2" fill="#ffffff"/>
+            
+            <!-- Bottom Row -->
+            <rect x="52" y="72" width="14" height="13" rx="2" ry="2" fill="#ffffff"/>
+            <rect x="72" y="72" width="14" height="13" rx="2" ry="2" fill="#ffffff"/>
+
+            <!-- Clock Face -->
+            <circle cx="29" cy="67" r="19" fill="#5d5c66" stroke="#ffffff" stroke-width="4.5"/>
+            
+            <!-- Clock Hands -->
+            <path d="M 29 67 L 29 54 M 29 67 L 19 71" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+            <span class="appointment-label">Make an appointment</span>
+          </a>
+
+          <button
+          id="burger"
+          class="burger relative z-50 flex flex-col items-end justify-center w-10 h-10"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="menuOverlay"
+        >
+          <span class="burger-line" style="background: #fff"></span>
+          <span class="burger-line" style="background: #fff"></span>
+          <span class="burger-line" style="background: #fff"></span>
+        </button>
+
+        </div>
+        
+      </div>
+    </header>
+
+    <!-- MENU OVERLAY -->
+    <div
+      id="menuOverlay"
+      class="menu-overlay fixed inset-0 z-[60] bg-ink text-paper flex flex-col"
+    >
+      <div
+        class="flex items-center justify-between px-6 md:px-10 lg:px-14 pt-6 md:pt-8"
+      >
+        <a href="#home" class="flex items-center" aria-label="Austin Artistic Dental">
+          <img
+            src="assets/others/logo.png"
+            alt="Austin Artistic Dental"
+            class="h-8 md:h-9 w-auto object-contain"
+          />
+        </a>
+        <button
+          id="closeMenu"
+          class="w-10 h-10 flex items-center justify-center"
+          aria-label="Close menu"
+        >
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div
+        class="flex-1 flex flex-col justify-center px-6 md:px-14 lg:px-20 gap-1"
+      >
+        <a
+          href="#home"
+          class="menu-link text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight2"
+          >Home</a
+        >
+        <a
+          href="#studio"
+          class="menu-link text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight2"
+          >About</a
+        >
+        <a
+          href="#trattamenti"
+          class="menu-link text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight2"
+          >Treatments</a
+        >
+        <a
+          href="#news"
+          class="menu-link text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight2"
+          >Clinical Team</a
+        >
+        <a
+          href="#contatti"
+          class="menu-link text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium tracking-tight2"
+          >Contact</a
+        >
+      </div>
+
+      <div
+        class="px-6 md:px-14 lg:px-20 pb-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 text-sm text-white/60"
+      >
+        <div>
+          <p>Austin, Texas</p>
+          <p>+1 (234) 567-890</p>
+        </div>
+        <div class="sm:text-right">
+          <p>Mon – Sat · By appointment</p>
+          <p>contact@austinartisticdental.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FLOATING HOVER IMAGE -->
+    <div id="hoverImg" class="hover-img" aria-hidden="true">
+      <div class="hover-img__inner">
+        <img id="hoverImgEl" alt="" decoding="async" />
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- HERO -->
+      <section
+        id="home"
+        class="relative w-full min-h-[85vh] md:min-h-screen overflow-hidden bg-ink"
+      >
+        <div class="absolute inset-0">
+          <img
+            src="assets/others/heroBg.jpg"
+            alt="Dentist treating a patient in a modern dental clinic"
+            class="w-full h-full object-cover"
+            data-critical
+            fetchpriority="high"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black/25 via-black/20 to-black/45"
+          ></div>
+        </div>
+
+        <div
+          class="relative z-10 h-full min-h-[85vh] md:min-h-screen flex items-end px-6 md:px-10 lg:px-14 pb-14 md:pb-20"
+        >
+          <h1
+            class="hero-title text-white font-medium tracking-tight2 leading-[0.88]"
+          >
+            <span class="block overflow-hidden"
+              ><span class="reveal-inner block" data-hero-line
+                >The Art</span
+              ></span
+            >
+            <span class="block overflow-hidden"
+              ><span class="reveal-inner block" data-hero-line
+                >of Your Smile</span
+              ></span
+            >
+          </h1>
+        </div>
+      </section>
+
+      <!-- INTRO -->
+      <section id="studio" class="relative bg-paper py-20 md:py-28 lg:py-32">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14">
+          <div
+            class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-end"
+          >
+            <div class="md:col-span-6 md:col-start-1">
+              <div
+                class="relative w-full max-w-[420px] mx-auto md:mx-0 aspect-[4/5] overflow-hidden rounded-sm"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=85"
+                  alt="Dentist with patient in consultation"
+                  class="w-full h-full object-cover"
+                  data-critical
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div class="md:col-span-6 md:col-start-7">
+              <h2
+                class="intro-title font-normal tracking-tight2 leading-[0.92] text-ink"
+              >
+                <span class="block overflow-hidden"
+                  ><span class="reveal-inner block" data-intro-line
+                    >Specialized</span
+                  ></span
+                >
+                <span class="block overflow-hidden"
+                  ><span
+                    class="reveal-inner block text-[#B9BDC4]"
+                    data-intro-line
+                    >dentistry.</span
+                  ></span
+                >
+              </h2>
+
+              <p
+                class="mt-8 text-[15px] leading-[1.75] text-muted max-w-[340px] md:ml-auto"
+              >
+                In Austin, Austin Artistic Dental is dedicated to oral health
+                and patient well-being through a multidisciplinary approach,
+                combining specialized clinical expertise, advanced technology,
+                and personalized treatment plans with genuine care for every
+                individual and their smile.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TREATMENTS -->
+      <section
+        id="trattamenti"
+        class="relative bg-paper pb-20 md:pb-28 lg:pb-32"
+      >
+        <div class="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14">
+          <div class="flex items-center justify-between mb-10 md:mb-14">
+            <span class="text-[11px] tracking-ultra uppercase text-muted"
+              >Treatments</span
+            >
+            <span class="text-[11px] tracking-ultra uppercase text-muted"
+              >06 Clinical Areas</span
+            >
+          </div>
+
+          <div id="treatmentList">
+            <a
+              href="#"
+              class="treatment-row"
+              data-img="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=85"
+            >
+              <span class="treatment-title">Dental Implants</span>
+              <span class="treatment-arrow">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M7 17L17 7M17 7H8M17 7v9" />
+                </svg>
+              </span>
+            </a>
+
+            <a
+              href="#"
+              class="treatment-row"
+              data-img="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=800&q=85"
+            >
+              <span class="treatment-title">Invisible Orthodontics</span>
+              <span class="treatment-arrow">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M7 17L17 7H8M17 7v9" />
+                </svg>
+              </span>
+            </a>
+
+            <a
+              href="#"
+              class="treatment-row"
+              data-img="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=85"
+            >
+              <span class="treatment-title">Teeth Whitening</span>
+              <span class="treatment-arrow">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M7 17L17 7H8M17 7v9" />
+                </svg>
+              </span>
+            </a>
+
+            <a
+              href="#"
+              class="treatment-row"
+              data-img="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=85"
+            >
+              <span class="treatment-title">Restorative Dentistry</span>
+              <span class="treatment-arrow">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M7 17L17 7H8M17 7v9" />
+                </svg>
+              </span>
+            </a>
+
+            <a
+              href="#"
+              class="treatment-row"
+              data-img="https://www.pellafamilydentistry.com/resourcefiles/fullwidth-single-snippet-image/periodontics.jpg"
+            >
+              <span class="treatment-title">Periodontics</span>
+              <span class="treatment-arrow">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M7 17L17 7M17 7H8M17 7v9" />
+                </svg>
+              </span>
+            </a>
+
+            <a
+              href="#"
+              class="treatment-row"
+              data-img="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=800&q=85"
+            >
+              <span class="treatment-title">Hygiene & Prevention</span>
+              <span class="treatment-arrow">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M7 17L17 7M17 7H8M17 7v9" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLINICAL DIRECTION -->
+      <section
+        id="news"
+        class="relative bg-paper py-20 md:py-28 lg:py-32 overflow-hidden"
+      >
+        <div class="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14">
+          <div
+            class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center"
+          >
+            <div class="md:col-span-6 md:col-start-1 order-2 md:order-1">
+              <h2
+                class="direction-title font-normal tracking-tight2 leading-[0.92] text-ink"
+              >
+                <span class="block overflow-hidden"
+                  ><span class="reveal-inner block" data-dir-line
+                    >Clinical</span
+                  ></span
+                >
+                <span class="block overflow-hidden"
+                  ><span class="reveal-inner block" data-dir-line
+                    >leadership at</span
+                  ></span
+                >
+                <span class="block overflow-hidden"
+                  ><span class="reveal-inner block" data-dir-line
+                    >Austin Artistic</span
+                  ></span
+                >
+                <span class="block overflow-hidden"
+                  ><span class="reveal-inner block" data-dir-line
+                    >Dental.</span
+                  ></span
+                >
+              </h2>
+
+              <p
+                class="mt-8 text-[14px] leading-[1.75] text-muted max-w-[320px]"
+              >
+                Clinical direction is led by Dr. Marco Angelucci, who coordinates
+                our multidisciplinary team and sets uncompromising standards for
+                diagnosis and care. Every treatment journey is meticulously planned
+                using advanced digital technologies and an integrated clinical vision.
+              </p>
+            </div>
+
+            <div class="md:col-span-6 md:col-start-7 order-1 md:order-2">
+              <div
+                class="relative w-full max-w-[420px] mx-auto md:mx-0 md:ml-auto aspect-[4/5] overflow-hidden rounded-sm"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=85"
+                  alt="Clinical dental team at work"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS / VALUES -->
+      <section class="relative bg-paper pb-20 md:pb-28 lg:pb-32">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14">
+          <div
+            class="relative flex flex-col items-center text-center gap-24 md:gap-32 py-10 md:py-16"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=300&q=80"
+              alt=""
+              class="float-img float-a"
+              loading="lazy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=300&q=80"
+              alt=""
+              class="float-img float-b"
+              loading="lazy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=300&q=80"
+              alt=""
+              class="float-img float-c"
+              loading="lazy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?auto=format&fit=crop&w=300&q=80"
+              alt=""
+              class="float-img float-d"
+              loading="lazy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=300&q=80"
+              alt=""
+              class="float-img float-e"
+              loading="lazy"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1771442873035-474765b40ac6?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+              alt=""
+              class="float-img float-f"
+              loading="lazy"
+            />
+
+            <p
+              class="process-line text-[clamp(1.4rem,3.4vw,2.6rem)] font-normal tracking-tight2 leading-[1.15] text-ink max-w-[820px] opacity-100"
+            >
+              Every journey begins with a thoughtful understanding of your clinical profile.
+            </p>
+            <p
+              class="process-line text-[clamp(1.4rem,3.4vw,2.6rem)] font-normal tracking-tight2 leading-[1.15] text-ink max-w-[820px] opacity-30"
+            >
+              Every journey begins with a thoughtful understanding of your clinical profile.
+            </p>
+            <p
+              class="process-line text-[clamp(1.4rem,3.4vw,2.6rem)] font-normal tracking-tight2 leading-[1.15] text-ink max-w-[900px] opacity-100"
+            >
+              Advanced digital technologies enable us to plan every treatment with supreme precision.
+            </p>
+            <p
+              class="process-line text-[clamp(1.4rem,3.4vw,2.6rem)] font-normal tracking-tight2 leading-[1.15] text-ink max-w-[900px] opacity-30"
+            >
+              Advanced digital technologies enable us to plan every treatment with supreme precision.
+            </p>
+            <p
+              class="process-line text-[clamp(1.4rem,3.4vw,2.6rem)] font-normal tracking-tight2 leading-[1.15] text-ink max-w-[900px] opacity-100"
+            >
+              Close interdisciplinary teamwork makes every stage of your care seamless and complete.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM -->
+      <section class="relative bg-cream py-20 md:py-28 lg:py-32">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14">
+          <div class="flex items-center justify-between mb-10 md:mb-14">
+            <span class="text-[11px] tracking-ultra uppercase text-muted"
+              >Our Team</span
+            >
+            <span class="text-[11px] tracking-ultra uppercase text-muted"
+              >Specialists</span
+            >
+          </div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10"
+          >
+            <div class="team-card reveal-up">
+              <div class="aspect-[3/4] overflow-hidden rounded-sm bg-soft">
+                <img
+                  src="assets/peoples/doc1.jpg"
+                  alt="Dr. Marco Angelucci"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="mt-5">
+                <h3 class="text-xl md:text-2xl font-medium tracking-tight">
+                  Dr. Marco Angelucci
+                </h3>
+                <p class="text-sm text-muted mt-1">
+                  Clinical Director · Implantology
+                </p>
+              </div>
+            </div>
+
+            <div class="team-card reveal-up">
+              <div class="aspect-[3/4] overflow-hidden rounded-sm bg-soft">
+                <img
+                  src="assets/peoples/doc2.jpg"
+                  alt="Dr. Roberto Di Vita"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="mt-5">
+                <h3 class="text-xl md:text-2xl font-medium tracking-tight">
+                  Dr. Roberto Di Vita
+                </h3>
+                <p class="text-sm text-muted mt-1">Invisible Orthodontics</p>
+              </div>
+            </div>
+
+            <div class="team-card reveal-up">
+              <div class="aspect-[3/4] overflow-hidden rounded-sm bg-soft">
+                <img
+                  src="assets/peoples/doc4.jpg"
+                  alt="Dr. Elena Sokolova"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div class="mt-5">
+                <h3 class="text-xl md:text-2xl font-medium tracking-tight">
+                  Dr. Elena Sokolova
+                </h3>
+                <p class="text-sm text-muted mt-1">Periodontics · Dental Hygiene</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="relative bg-paper py-20 md:py-28 lg:py-32">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12">
+            <div class="md:col-span-4">
+              <span
+                class="text-[11px] tracking-ultra uppercase text-muted block mb-4"
+                >Frequently Asked Questions</span
+              >
+              <h2
+                class="text-4xl md:text-5xl font-normal tracking-tight2 leading-[0.95]"
+              >
+                Everything you need to know.
+              </h2>
+            </div>
+
+            <div class="md:col-span-8" id="faqList">
+              <div class="faq-item">
+                <button class="faq-trigger" type="button" aria-expanded="false">
+                  <span>Are dental implants painful?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner">
+                    Implant placement is performed under local anesthesia and is
+                    completely painless in most cases. Any minor discomfort or
+                    swelling in the days following can be easily managed with
+                    prescribed aftercare. Our clinical team schedules attentive
+                    follow-ups to support every stage of healing.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-trigger" type="button" aria-expanded="false">
+                  <span
+                    >How long does clear aligner treatment take?</span
+                  >
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner">
+                    Treatment duration depends on case complexity, but typically
+                    ranges between 6 and 18 months. During your first visit, we
+                    design a detailed treatment plan featuring a digital 3D preview
+                    of your final smile.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-trigger" type="button" aria-expanded="false">
+                  <span>How often is professional dental cleaning recommended?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner">
+                    We typically recommend a professional cleaning every 6 months,
+                    though intervals may vary based on periodontal condition,
+                    implants, orthodontic appliances, and personal lifestyle.
+                    We provide personalized guidance during your examination.
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button class="faq-trigger" type="button" aria-expanded="false">
+                  <span>What happens during the first consultation?</span>
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-panel">
+                  <div class="faq-panel-inner">
+                    Your first visit is dedicated to comprehensive assessment and
+                    understanding your goals. It includes a thorough clinical exam,
+                    digital diagnostics as needed, and an in-depth review of
+                    treatment options with transparent, no-obligation pricing.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contatti" class="relative bg-cream py-20 md:py-28 lg:py-32">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12">
+            <div class="md:col-span-5">
+              <span
+                class="text-[11px] tracking-ultra uppercase text-muted block mb-4"
+                >Your first visit starts here.</span
+              >
+              <h2
+                class="text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight2 leading-[0.95] mb-10"
+              >
+                Contact Us.
+              </h2>
+
+              <div class="flex flex-col gap-8 text-[14px] leading-[1.8]">
+                <div>
+                  <span
+                    class="text-[10px] tracking-ultra uppercase text-muted block mb-1"
+                    >Address</span
+                  >
+                  <p class="text-ink">
+                    Austin, Texas<br />United States
+                  </p>
+                </div>
+                <div>
+                  <span
+                    class="text-[10px] tracking-ultra uppercase text-muted block mb-1"
+                    >Phone</span
+                  >
+                  <a
+                    href="tel:+1234567890"
+                    class="text-ink hover:opacity-60 transition-opacity"
+                    >+1 (234) 567-890</a
+                  >
+                </div>
+                <div>
+                  <span
+                    class="text-[10px] tracking-ultra uppercase text-muted block mb-1"
+                    >Email</span
+                  >
+                  <a
+                    href="mailto:austinartisticdental@gmail.com"
+                    class="text-ink hover:opacity-60 transition-opacity break-all"
+                    >austinartisticdental@gmail.com</a
+                  >
+                </div>
+                <div>
+                  <span
+                    class="text-[10px] tracking-ultra uppercase text-muted block mb-1"
+                    >Hours</span
+                  >
+                  <p class="text-ink">Monday – Saturday<br />By appointment</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:col-span-7">
+              <form class="flex flex-col gap-6" id="contactForm" novalidate>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <label class="block">
+                    <span
+                      class="text-[10px] tracking-ultra uppercase text-muted block mb-1"
+                      >Full Name</span
+                    >
+                    <input
+                      type="text"
+                      name="name"
+                      class="input-min"
+                      placeholder="Jane Doe"
+                      required
+                    />
+                  </label>
+                  <label class="block">
+                    <span
+                      class="text-[10px] tracking-ultra uppercase text-muted block mb-1"
+                      >Email</span
+                    >
+                    <input
+                      type="email"
+                      name="email"
+                      class="input-min"
+                      placeholder="jane@example.com"
+                      required
+                    />
+                  </label>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <label class="block">
+                    <span
+                      class="text-[10px] tracking-ultra uppercase text-muted block mb-1"
+                      >Phone</span
+                    >
+                    <input
+                      type="tel"
+                      name="phone"
+                      class="input-min"
+                      placeholder="+1 (555) 000-0000"
+                    />
+                  </label>
+                  <label class="block">
+                    <span
+                      class="text-[10px] tracking-ultra uppercase text-muted block mb-1"
+                      >Reason for Visit</span
+                    >
+                    <select
+                      name="reason"
+                      class="input-min appearance-none cursor-pointer"
+                    >
+                      <option value="">Select a reason…</option>
+                      <option>First Consultation</option>
+                      <option>Dental Implants</option>
+                      <option>Invisible Orthodontics</option>
+                      <option>Hygiene & Prevention</option>
+                      <option>Other Inquiry</option>
+                    </select>
+                  </label>
+                </div>
+
+                <label class="block">
+                  <span
+                    class="text-[10px] tracking-ultra uppercase text-muted block mb-1"
+                    >Message</span
+                  >
+                  <textarea
+                    name="message"
+                    rows="4"
+                    class="input-min resize-none"
+                    placeholder="Write your message here…"
+                  ></textarea>
+                </label>
+
+                <label
+                  class="flex items-start gap-3 text-[12px] leading-[1.6] text-muted"
+                >
+                  <input
+                    type="checkbox"
+                    name="privacy"
+                    class="check-min mt-1"
+                    required
+                  />
+                  <span
+                    >I have read and agree to the Privacy Policy and consent to
+                    the processing of my personal information.</span
+                  >
+                </label>
+
+                <button
+                  type="submit"
+                  class="submit-btn mt-2 inline-flex items-center gap-3 self-start rounded-full bg-ink text-paper px-8 py-4 text-[13px] font-medium tracking-wide transition-all duration-300 hover:bg-ink/80 hover:gap-4"
+                >
+                  Send Request
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M7 17L17 7M17 7H8M17 7v9" />
+                  </svg>
+                </button>
+
+                <p id="formStatus" class="text-[12px] text-muted hidden">
+                  Thank you — your request has been received. We will contact
+                  you shortly.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="relative bg-mist pt-20 md:pt-28 pb-6 overflow-hidden">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-14">
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 pb-16 md:pb-20 border-b border-line"
+          >
+            <div>
+              <h4 class="text-[10px] tracking-ultra uppercase text-muted mb-5">
+                Practice
+              </h4>
+              <ul class="flex flex-col gap-3 text-[14px]">
+                <li>
+                  <a href="#home" class="hover:opacity-60 transition-opacity"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="#studio" class="hover:opacity-60 transition-opacity"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#trattamenti"
+                    class="hover:opacity-60 transition-opacity"
+                    >Treatments</a
+                  >
+                </li>
+                <li>
+                  <a href="#news" class="hover:opacity-60 transition-opacity"
+                    >Clinical Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contatti"
+                    class="hover:opacity-60 transition-opacity"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-[10px] tracking-ultra uppercase text-muted mb-5">
+                Clinical Areas
+              </h4>
+              <ul class="flex flex-col gap-3 text-[14px]">
+                <li>
+                  <a
+                    href="#trattamenti"
+                    class="hover:opacity-60 transition-opacity"
+                    >Dental Implants</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#trattamenti"
+                    class="hover:opacity-60 transition-opacity"
+                    >Invisible Orthodontics</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#trattamenti"
+                    class="hover:opacity-60 transition-opacity"
+                    >Teeth Whitening</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#trattamenti"
+                    class="hover:opacity-60 transition-opacity"
+                    >Hygiene & Prevention</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#trattamenti"
+                    class="hover:opacity-60 transition-opacity"
+                    >All Treatments</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-[10px] tracking-ultra uppercase text-muted mb-5">
+                Location
+              </h4>
+              <p class="text-[14px] leading-[1.8]">
+                Austin, Texas<br />
+                United States
+              </p>
+              <a
+                href="#contatti"
+                class="inline-block mt-3 text-[13px] underline underline-offset-4 decoration-line hover:decoration-ink transition-colors"
+                >Get in Touch</a
+              >
+            </div>
+
+            <div>
+              <h4 class="text-[10px] tracking-ultra uppercase text-muted mb-5">
+                Legal
+              </h4>
+              <ul class="flex flex-col gap-3 text-[14px]">
+                <li>
+                  <a href="#" class="hover:opacity-60 transition-opacity"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:opacity-60 transition-opacity"
+                    >Cookie Policy</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-12 md:pt-16 overflow-hidden">
+            <div class="watermark">Austin Artistic Dental</div>
+          </div>
+
+          <div
+            class="pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-[11px] text-muted"
+          >
+            <span
+              >© 2026 Austin Artistic Dental — All rights reserved.</span
+            >
+            <span>Austin, Texas · Specialized Dentistry</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

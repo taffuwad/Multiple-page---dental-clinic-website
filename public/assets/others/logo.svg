@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 90" width="440" height="90" fill="none">
+  <!-- Minimalist stylized tooth/artistic crown mark -->
+  <path d="M28 22 C22 22 14 30 14 44 C14 62 26 74 34 74 C40 74 42 66 45 66 C48 66 50 74 56 74 C64 74 76 62 76 44 C76 30 68 22 62 22 C53 22 47 30 45 30 C43 30 37 22 28 22 Z" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="45" cy="45" r="4.5" fill="#ffffff" />
+  <!-- Typography -->
+  <text x="96" y="38" fill="#ffffff" font-family="Inter, -apple-system, sans-serif" font-size="21" font-weight="700" letter-spacing="3.5">AUSTIN ARTISTIC</text>
+  <text x="96" y="66" fill="#ffffff" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="400" letter-spacing="7.5" opacity="0.9">DENTAL</text>
+</svg>

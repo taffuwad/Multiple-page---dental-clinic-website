@@ -1,0 +1,6 @@
+{
+  "name": "Austin Artistic Dental",
+  "description": "Specialized dentistry clinic in Austin, Texas offering dental implants, invisible orthodontics, teeth whitening, restorative dentistry, periodontics, and preventive dental care.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

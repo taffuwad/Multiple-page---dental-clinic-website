@@ -1,0 +1,849 @@
+# MASTER PROMPT — ADD 6 INDIVIDUAL DENTAL TREATMENT PAGES
+
+## 1. ROLE AND OBJECTIVE
+
+Act as a senior frontend developer, UI/UX designer, and GSAP motion designer.
+
+I already have a completed dental clinic website with an existing homepage. I want you to extend the website by creating **six individual treatment-detail pages** connected to the existing Treatments section.
+
+**The most important requirement: DO NOT CHANGE THE EXISTING HOMEPAGE DESIGN, UI, TYPOGRAPHY, COLOR PALETTE, SPACING, LAYOUT, ANIMATIONS, OR RESPONSIVE BEHAVIOR.**
+
+The existing homepage must look and function exactly as it does before the changes.
+
+Your task is to add six new pages, connect the existing treatment list to those pages, and maintain complete visual consistency with the original website.
+
+Do not redesign the website. Do not replace the existing design with a generic dental template. Do not change the current hero, navbar, gallery, sections, images, animations, or footer.
+
+Treat this as an extension of an existing website, not a redesign.
+
+---
+
+# 2. EXISTING TREATMENTS SECTION
+
+The homepage already contains a section with:
+
+- Section ID: `trattamenti`
+- Section label: `Treatments`
+- Secondary label: `06 Clinical Areas`
+- Container width: `max-w-[1440px]`
+- Existing treatment rows using the class `treatment-row`
+- Existing title elements using `treatment-title`
+- Existing arrow elements using `treatment-arrow`
+- Existing treatment images assigned through `data-img`
+
+Preserve this section's current visual layout and styling.
+
+The existing six treatment names are:
+
+1. Dental Implants
+2. Invisible Orthodontics
+3. Teeth Whitening
+4. Restorative Dentistry
+5. Periodontics
+6. Hygiene & Prevention
+
+Each treatment row must navigate to its own dedicated page instead of using `href="#"`.
+
+Do not replace the treatment list with cards, a grid, or a different component. Keep the same row structure, typography, spacing, hover interactions, arrow icons, and existing visual design.
+
+---
+
+# 3. CREATE SIX SEPARATE PAGES
+
+Create these six individual treatment pages.
+
+| Treatment | Page filename | URL |
+|---|---|---|
+| Dental Implants | `dental-implants.html` | `/dental-implants.html` |
+| Invisible Orthodontics | `invisible-orthodontics.html` | `/invisible-orthodontics.html` |
+| Teeth Whitening | `teeth-whitening.html` | `/teeth-whitening.html` |
+| Restorative Dentistry | `restorative-dentistry.html` | `/restorative-dentistry.html` |
+| Periodontics | `periodontics.html` | `/periodontics.html` |
+| Hygiene & Prevention | `hygiene-prevention.html` | `/hygiene-prevention.html` |
+
+Use individual HTML files if the existing website is built with plain HTML, CSS, and JavaScript.
+
+If the existing project already has a routing system, use its established routing approach instead of introducing an unnecessary second system.
+
+Do not create six copies of the entire homepage. Create six focused treatment-detail pages that reuse the existing design system and shared components wherever possible.
+
+---
+
+# 4. ABSOLUTE DESIGN-PRESERVATION RULES
+
+Before making any changes, inspect the existing project files.
+
+Identify and reuse:
+
+- The exact font families and font weights.
+- The existing CSS custom properties and design tokens.
+- The background and text colors.
+- The existing heading sizes and letter spacing.
+- The navbar structure and appearance.
+- The button styles.
+- The maximum content width.
+- The page gutters and vertical spacing.
+- Existing border styles and image treatments.
+- Existing responsive breakpoints.
+- Current GSAP animations.
+- Current Lenis or Locomotive Scroll setup, if present.
+- Existing footer layout.
+- Existing icon style.
+- Existing image hover and scroll-reveal effects.
+
+Do not invent a new design system.
+
+Do not introduce a new font, color palette, button style, animation style, or component appearance.
+
+The treatment pages should look as if they were designed as part of the original website from the beginning.
+
+### Preserve the homepage
+
+Do not modify the visual appearance of the homepage.
+
+Do not:
+- Change the hero height or background.
+- Change the navbar's position, typography, or spacing.
+- Change the homepage section order.
+- Change the treatment list's styling.
+- Change existing gallery images.
+- Change the homepage animations or their timing.
+- Change the footer styling.
+- Change the existing scroll behavior.
+- Globally override existing CSS selectors.
+- Remove existing JavaScript functionality.
+- Replace the current font with another font.
+- Add a new global CSS reset that changes the appearance.
+
+Only make the minimum necessary homepage change: replace the six placeholder treatment URLs with the correct page links.
+
+If a shared component needs a small compatibility adjustment, make the change carefully and verify that the homepage looks identical afterward.
+
+---
+
+# 5. SHARED PAGE STRUCTURE
+
+All six treatment pages should use the same overall page structure, adapted to the specific treatment.
+
+## A. Existing navbar
+
+Reuse the existing navbar from the homepage.
+
+The treatment pages must preserve its:
+- Height and spacing.
+- Logo and typography.
+- Navigation labels.
+- Colors and backgrounds.
+- Button appearance.
+- Hover effects.
+- Sticky or fixed behavior.
+- Mobile menu behavior.
+- Existing animation style.
+
+Make sure internal navigation works correctly from every treatment page.
+
+Do not create a new navbar style just for the treatment pages.
+
+If the existing website already has a shared navbar component or reusable header, use it. If not, reuse the same original HTML structure and styles without changing its appearance.
+
+## B. Breadcrumb navigation
+
+Place a subtle breadcrumb immediately below the navbar or at the beginning of the treatment hero.
+
+Example:
+
+`HOME / TREATMENTS / DENTAL IMPLANTS`
+
+Make the `HOME` and `TREATMENTS` links functional.
+
+Use the existing site's typography, text color, uppercase styling, letter spacing, and divider conventions.
+
+Keep the breadcrumb small and understated so it doesn't compete with the page heading.
+
+## C. Treatment hero
+
+Create an elegant treatment-detail hero using the original homepage's design language.
+
+Each hero should include:
+
+- A small uppercase eyebrow label.
+- The treatment title.
+- A concise introductory sentence.
+- A primary appointment-booking CTA.
+- A secondary scroll or learn-more link.
+- A carefully selected treatment-related photograph.
+- A small supporting label or section indicator if it matches the original design.
+
+Use the same hero composition principles found on the existing homepage.
+
+The exact layout may adapt to the current design—for example, an asymmetrical image-and-text arrangement if that is consistent with the original site.
+
+Do not invent an entirely new visual style.
+
+The treatment title should be the dominant element on each page, using the existing heading font, weight, spacing, and responsive sizing.
+
+Use realistic dental-care photography that fits the current image treatment and color grading.
+
+Avoid exaggerated medical imagery, frightening close-ups, generic stock-photo compositions, and overly colorful illustrations that conflict with the original design.
+
+## D. Treatment overview
+
+Below the hero, add an introductory section explaining the treatment.
+
+Include:
+- A small section label.
+- A clear heading.
+- A concise description.
+- A supporting image or visual detail if appropriate.
+
+Use the original site's content width, alignment, spacing, typography, background colors, and section dividers.
+
+The writing should sound professional, understandable, reassuring, and patient-focused.
+
+Avoid excessive paragraphs. Break information into readable sections.
+
+## E. Benefits and features
+
+Create a section explaining the potential benefits and important features of the treatment.
+
+Use a layout appropriate to the original website's design system, such as an editorial list, numbered items, or a minimal grid.
+
+Do not automatically introduce rounded cards if the existing site uses open layouts or divider-separated rows.
+
+Every treatment page should have content specific to its topic rather than repeating the exact same generic benefits.
+
+Medical information must be factual and conservative. Do not promise guaranteed results, make unsupported clinical claims, or suggest that every treatment is suitable for every patient.
+
+## F. Treatment process
+
+Include a section explaining how the treatment typically works.
+
+Use three or four steps where appropriate.
+
+Each step should include:
+- Step number.
+- Short title.
+- Brief explanation.
+- Optional visual detail.
+
+Use the original site's existing section-label style, text hierarchy, and dividers.
+
+The process should be informative without attempting to replace an individual dental consultation.
+
+When the process varies between patients, clearly state that the exact approach depends on the dentist's examination and treatment plan.
+
+## G. Who may benefit from this treatment?
+
+Add an informative section explaining common reasons someone might discuss this treatment with a dentist.
+
+Use approachable language and avoid diagnosing the visitor.
+
+Include a short note that a dentist must assess the individual's oral health, circumstances, and suitability before recommending treatment.
+
+Do not make this section alarmist or sales-heavy.
+
+## H. Frequently asked questions
+
+Add a treatment-specific FAQ section near the bottom of every page.
+
+Include approximately four or five useful questions and concise answers relevant to the particular treatment.
+
+The FAQ interaction should match the original website's UI.
+
+If the website already uses an accordion component, reuse it. Otherwise, build a minimal accessible accordion with the current typography, borders, colors, and spacing.
+
+Requirements:
+- Questions are buttons.
+- Keyboard navigation works.
+- The expanded state is communicated accessibly.
+- Only the intended answer expands or collapses.
+- No unrelated animation or layout changes occur.
+
+Keep the answers informative and avoid guaranteeing outcomes, treatment duration, or prices that haven't been supplied by the clinic.
+
+## I. Appointment CTA
+
+Near the bottom of every treatment page, create a conversion section encouraging patients to schedule a consultation.
+
+The section should use the existing website's styling and CTA conventions.
+
+Use a treatment-specific heading, for example:
+
+`READY TO EXPLORE DENTAL IMPLANTS?`
+
+Supporting text:
+
+`Schedule a consultation to discuss your goals and learn which options may be suitable for you.`
+
+Primary button:
+
+`BOOK A CONSULTATION`
+
+The CTA must perform a real, defined action.
+
+If the original website already has a booking section, booking page, phone link, or contact form, connect the button to the existing destination. Do not invent a booking URL, email address, phone number, or backend.
+
+If no booking system exists, link to the homepage's existing contact or booking section and leave the destination easy to configure.
+
+## J. Existing footer
+
+Reuse the existing homepage footer exactly.
+
+Preserve:
+- Layout.
+- Typography.
+- Colors.
+- Social links.
+- Contact information.
+- Hover effects.
+- Dividers.
+- Background.
+- Responsive behavior.
+
+Do not create a completely different footer for the treatment pages.
+
+---
+
+# 6. INDIVIDUAL PAGE CONTENT
+
+Each page needs its own hero, overview, benefits, process, FAQ, images, and booking CTA.
+
+Use the following content direction.
+
+## PAGE 1 — DENTAL IMPLANTS
+
+**Title:** Dental Implants
+
+**Eyebrow:** RESTORATIVE DENTISTRY
+
+**Hero introduction:**
+
+`Explore a long-term tooth-replacement option designed to restore function and support a natural-looking smile.`
+
+### Overview
+
+Explain at a high level that dental implants are placed in the jaw to support a replacement tooth or other dental restoration.
+
+Discuss the importance of a clinical assessment, oral health, available bone, and an individualized treatment plan.
+
+### Suggested benefits section
+
+- A fixed tooth-replacement option for suitable patients.
+- Designed to support chewing function.
+- Can be planned to complement surrounding teeth.
+- May help support confidence in everyday smiling.
+
+Explain that individual outcomes and suitability vary.
+
+### Suggested process
+
+1. Consultation and assessment.
+2. Personalized treatment planning.
+3. Implant placement when appropriate.
+4. Healing and restoration.
+
+Explain that the stages and total treatment time depend on the patient's clinical needs.
+
+### FAQ topics
+
+- What is a dental implant?
+- Who may be suitable for dental implants?
+- How long does the process take?
+- What care is required after treatment?
+- What alternatives may be available?
+
+Use a high-quality image showing a dental consultation, implant-related model, or natural-looking smile.
+
+Avoid graphic surgical imagery.
+
+---
+
+## PAGE 2 — INVISIBLE ORTHODONTICS
+
+**Title:** Invisible Orthodontics
+
+**Eyebrow:** MODERN ALIGNER TREATMENT
+
+**Hero introduction:**
+
+`Discover discreet orthodontic options designed to help guide teeth toward a planned alignment.`
+
+### Overview
+
+Explain clear aligners in simple language, including that treatment requires planning and periodic professional monitoring.
+
+Do not imply that invisible orthodontics is suitable for every alignment issue.
+
+### Suggested benefits section
+
+- Clear aligners can be less noticeable than conventional braces.
+- Removable appliances can simplify eating and oral hygiene.
+- Treatment can be planned around individual alignment goals.
+- Results depend on clinical suitability and consistent use.
+
+### Suggested process
+
+1. Orthodontic assessment.
+2. Digital or conventional treatment planning.
+3. Custom appliance fitting.
+4. Follow-up and progress reviews.
+
+### FAQ topics
+
+- What is invisible orthodontics?
+- Are clear aligners suitable for everyone?
+- How long can treatment take?
+- Can aligners be removed?
+- How should aligners be cleaned?
+
+Use photography of a dental professional consulting with a patient or a clear aligner being examined. Avoid unrealistic instant-transformation imagery.
+
+---
+
+## PAGE 3 — TEETH WHITENING
+
+**Title:** Teeth Whitening
+
+**Eyebrow:** SMILE AESTHETICS
+
+**Hero introduction:**
+
+`Learn about professional whitening options designed to address certain types of tooth discoloration.`
+
+### Overview
+
+Explain that professional whitening should begin with an assessment to identify the cause of discoloration and check oral health.
+
+Clearly distinguish whitening from treatments that alter the shape or structure of teeth.
+
+### Suggested benefits section
+
+- Can help reduce certain types of surface or internal discoloration.
+- May improve the appearance of natural teeth.
+- Can be planned according to dental assessment.
+- May require maintenance depending on individual habits and results.
+
+Avoid promising a specific shade or universally pain-free treatment.
+
+### Suggested process
+
+1. Dental assessment.
+2. Discussion of appropriate whitening options.
+3. Professional treatment or individualized guidance.
+4. Aftercare and maintenance advice.
+
+### FAQ topics
+
+- How does professional teeth whitening work?
+- Is whitening suitable for every patient?
+- Can sensitivity occur?
+- How long can the results last?
+- Are crowns and fillings whitened in the same way as natural teeth?
+
+Use elegant photography of a natural smile and a dental professional discussing cosmetic treatment. Avoid artificial-looking, excessively white teeth.
+
+---
+
+## PAGE 4 — RESTORATIVE DENTISTRY
+
+**Title:** Restorative Dentistry
+
+**Eyebrow:** FUNCTION & RESTORATION
+
+**Hero introduction:**
+
+`Explore treatment options that help address damaged, weakened, or missing tooth structure.`
+
+### Overview
+
+Describe restorative dentistry as a broad area that may include fillings, crowns, bridges, and other restorations according to the individual patient's needs.
+
+### Suggested benefits section
+
+- Addresses selected forms of tooth damage.
+- Can help restore tooth shape and function.
+- May protect weakened teeth when clinically appropriate.
+- Supports personalized treatment planning.
+
+### Suggested process
+
+1. Examination and diagnosis.
+2. Discussion of restoration options.
+3. Treatment planning and preparation.
+4. Placement, adjustment, and follow-up.
+
+### FAQ topics
+
+- What does restorative dentistry include?
+- When might a filling or crown be recommended?
+- How is a treatment plan chosen?
+- How should restorations be maintained?
+- When should I seek an assessment for a damaged tooth?
+
+Use high-quality clinical photography that demonstrates consultation, restoration planning, or dental models. Avoid graphic images.
+
+---
+
+## PAGE 5 — PERIODONTICS
+
+**Title:** Periodontics
+
+**Eyebrow:** GUM HEALTH
+
+**Hero introduction:**
+
+`Understand the care options available for maintaining healthy gums and managing periodontal conditions.`
+
+### Overview
+
+Explain the role of periodontal care in assessing and managing gum health, including the supporting tissues around teeth.
+
+Emphasize the importance of a professional examination for determining the appropriate treatment.
+
+### Suggested benefits section
+
+- Supports early assessment of gum concerns.
+- Helps address plaque and tartar-related gum problems.
+- Provides ongoing monitoring where appropriate.
+- Supports long-term oral-health planning.
+
+### Suggested process
+
+1. Gum-health examination.
+2. Professional assessment and diagnosis.
+3. Individualized periodontal care plan.
+4. Maintenance and follow-up.
+
+### FAQ topics
+
+- What does a periodontist treat?
+- What are common signs of gum problems?
+- How is gum health assessed?
+- Why might maintenance visits be recommended?
+- When should I schedule a dental assessment?
+
+Use calm, professional imagery of a dental professional examining gum health or discussing treatment with a patient.
+
+Avoid frightening or graphic depictions of gum disease.
+
+---
+
+## PAGE 6 — HYGIENE & PREVENTION
+
+**Title:** Hygiene & Prevention
+
+**Eyebrow:** EVERYDAY ORAL HEALTH
+
+**Hero introduction:**
+
+`Build a practical oral-care routine with professional guidance, preventive visits, and personalized hygiene advice.`
+
+### Overview
+
+Describe preventive dental care, including professional cleaning where appropriate, oral-hygiene instruction, and assessment of factors that may influence oral health.
+
+Keep the tone encouraging rather than judgmental.
+
+### Suggested benefits section
+
+- Helps maintain everyday oral hygiene.
+- Supports early identification of potential concerns.
+- Provides guidance on brushing and interdental cleaning.
+- Helps patients build a personalized preventive-care routine.
+
+### Suggested process
+
+1. Oral-health assessment.
+2. Professional cleaning when indicated.
+3. Personalized oral-hygiene guidance.
+4. Recommended follow-up intervals.
+
+### FAQ topics
+
+- What happens during a professional cleaning?
+- How often should I visit a dentist?
+- What is the best way to clean between teeth?
+- Can professional cleaning replace daily brushing?
+- How can I maintain good oral hygiene at home?
+
+Use clean, reassuring photography of professional cleaning, oral-hygiene guidance, or a dental consultation.
+
+---
+
+# 7. IMAGE AND ASSET REQUIREMENTS
+
+Use images appropriate to each treatment rather than repeating the same hero image across all six pages.
+
+Choose high-quality assets consistent with the original homepage's photography, cropping, lighting, and color treatment.
+
+Requirements:
+- Use reliable, working image sources.
+- Preserve the existing homepage's image style.
+- Use `object-fit: cover` with carefully chosen `object-position`.
+- Provide descriptive alt text.
+- Use responsive image sizing.
+- Lazy-load below-the-fold photography.
+- Avoid oversized files that delay rendering.
+- Provide a fallback background or image if a remote asset fails.
+
+If the existing project already contains suitable images, reuse them where appropriate.
+
+Do not alter the image assets or background images used on the homepage.
+
+---
+
+# 8. ANIMATIONS — MATCH THE ORIGINAL WEBSITE
+
+The new treatment pages must use the same motion language as the existing homepage.
+
+Reuse the existing GSAP, ScrollTrigger, and Lenis or Locomotive Scroll setup, depending on what the project currently uses.
+
+Do not install another animation library or initialize another smooth-scroll engine unnecessarily.
+
+### Page entrance
+
+Use a subtle entrance sequence consistent with the homepage:
+
+1. Existing navbar appears in its normal style.
+2. Breadcrumb fades in.
+3. Treatment heading reveals line by line.
+4. Supporting text fades upward.
+5. Hero photograph reveals through a mask.
+6. CTA appears with a subtle movement.
+7. The next section enters naturally.
+
+Reuse the same headline animation approach and easing as the original site.
+
+### Scroll reveals
+
+Animate:
+- Treatment section headings.
+- Image masks.
+- Benefit rows.
+- Process steps.
+- FAQ section entrance.
+- Booking CTA.
+
+Keep durations and stagger values consistent with the current homepage.
+
+Do not add excessive parallax or dramatic effects if the homepage uses restrained movement.
+
+### SplitText
+
+If the existing website already uses GSAP SplitText, reuse the current implementation for the treatment headings.
+
+If SplitText is not installed or available, do not introduce a paid dependency unnecessarily. Use the existing text-reveal utility or simple accessible line wrappers when appropriate.
+
+Preserve proper text wrapping on different viewport sizes.
+
+### Reduced motion
+
+Honor `prefers-reduced-motion`.
+
+Ensure all content remains visible and usable when animations are disabled.
+
+### Scroll integration
+
+If the website currently uses Lenis, keep its existing integration.
+
+If it currently uses Locomotive Scroll, retain the existing version and setup.
+
+Do not replace one scrolling library with another merely to create these pages.
+
+Never mix incompatible APIs from different versions.
+
+---
+
+# 9. LINK THE HOMEPAGE TREATMENT ROWS
+
+Update the existing treatment section with only the following necessary link changes.
+
+Keep every existing class, child element, `data-img`, SVG arrow, and the overall markup structure unchanged.
+
+Change only the six `href="#"` values:
+
+Dental Implants:
+
+`href="dental-implants.html"`
+
+Invisible Orthodontics:
+
+`href="invisible-orthodontics.html"`
+
+Teeth Whitening:
+
+`href="teeth-whitening.html"`
+
+Restorative Dentistry:
+
+`href="restorative-dentistry.html"`
+
+Periodontics:
+
+`href="periodontics.html"`
+
+Hygiene & Prevention:
+
+`href="hygiene-prevention.html"`
+
+Do not change the treatment names or current image mappings.
+
+If the existing site uses absolute routes or a different directory structure, adjust the relative paths correctly to fit the project.
+
+### Interaction requirements
+
+- Clicking a row opens the appropriate treatment page.
+- The entire row remains clickable.
+- The existing hover-image effect continues to work.
+- The existing arrow animation remains unchanged.
+- Clicking on mobile works correctly.
+- Links have meaningful destinations and are keyboard accessible.
+- Returning to the homepage restores the original layout and interactions.
+
+---
+
+# 10. NAVIGATION BETWEEN THE SIX PAGES
+
+Each treatment page should include functional links to:
+- Home.
+- Treatments.
+- The other relevant sections of the website.
+- The consultation or booking destination.
+
+Add a simple previous/next treatment navigation near the bottom if it fits the original design.
+
+Use a consistent visual treatment for these navigation links.
+
+For example:
+
+`← PREVIOUS TREATMENT`
+
+`NEXT TREATMENT →`
+
+Do not allow next/previous links to point to the wrong pages.
+
+The previous and next treatment links should follow the order of the existing Treatments section.
+
+---
+
+# 11. TECHNICAL IMPLEMENTATION AND CODE ORGANIZATION
+
+Inspect the existing project structure before making changes.
+
+### Shared assets
+
+Reuse the current CSS files, JavaScript files, font imports, icon definitions, and animation utilities.
+
+If the project does not already have shared styles for components, reuse the original markup and styling patterns rather than redesigning them.
+
+If appropriate for the existing structure, organize assets like this:
+
+- `index.html`
+- `dental-implants.html`
+- `invisible-orthodontics.html`
+- `teeth-whitening.html`
+- `restorative-dentistry.html`
+- `periodontics.html`
+- `hygiene-prevention.html`
+- Existing CSS and JavaScript files
+- Existing image assets
+
+Do not move or rename files unnecessarily.
+
+### CSS isolation
+
+Prefer reuse of existing classes and variables.
+
+If page-specific CSS is needed, namespace its selectors, such as:
+
+`.treatment-page`
+
+`.treatment-hero`
+
+`.treatment-overview`
+
+`.treatment-process`
+
+`.treatment-faq`
+
+Avoid broad selectors that accidentally modify the homepage.
+
+Do not overwrite existing global styles such as `body`, `h1`, `a`, or `section` when a scoped class will work.
+
+### JavaScript
+
+Ensure the scripts work correctly on every page.
+
+Guard selectors when an element is absent. For example, if a gallery initialization function exists only on the homepage, it must not throw an error when loaded on a treatment page.
+
+Reuse common navigation, mobile-menu, animation, and accordion behavior where appropriate.
+
+Avoid loading or initializing homepage-only interactions on every new page if they are unnecessary.
+
+Do not create duplicate smooth-scroll instances.
+
+---
+
+# 12. SEO AND METADATA
+
+Give every treatment page a unique:
+- HTML title.
+- Meta description.
+- Main heading.
+- Relevant image alt text.
+- Canonical URL, when the production domain is known.
+- Appropriate social-sharing metadata.
+
+Example title:
+
+`Dental Implants | Smile Regularly`
+
+Use the actual existing clinic brand and production domain configured in the project. Do not invent a domain or contact information.
+
+Use semantic heading structure, with one primary H1 per page.
+
+Write informative descriptions without keyword stuffing.
+
+---
+
+# 13. FUNCTIONALITY AND VALIDATION
+
+Before finishing, verify:
+
+- All six HTML pages load directly by their URLs.
+- The homepage still looks exactly as it did before the changes.
+- The navbar works across all seven pages.
+- Every treatment row opens the correct page.
+- All booking buttons have valid destinations.
+- Images load or fall back gracefully.
+- The FAQ accordions work.
+- The mobile menu works.
+- All animations work without JavaScript errors.
+- Scrolling remains consistent with the homepage.
+- The page content is visible even if GSAP fails.
+- No external image or font errors break the page.
+- All internal links are correct.
+- No placeholder `href="#"` remains for a real navigation control.
+- The pages are responsive on mobile, tablet, and desktop.
+- Browser console contains no errors caused by the new pages.
+
+Check the original homepage before and after implementation to confirm that the design has not changed.
+
+---
+
+# 14. FINAL ACCEPTANCE CRITERIA
+
+The project is complete only when:
+
+1. There are six separate treatment-detail pages.
+2. Each page has unique, relevant content.
+3. Each page uses the same design system as the original homepage.
+4. The homepage remains visually unchanged.
+5. The six treatment rows link to their correct pages.
+6. The navbar, footer, buttons, and animations are consistent.
+7. GSAP and the existing smooth-scroll system work without conflicts.
+8. The treatment pages have responsive layouts.
+9. Each page has working FAQs and a consultation CTA.
+10. No incomplete content, broken image paths, or dead links remain.
+
+**Final instruction:** Do not redesign the original website. Extend it carefully with six polished treatment pages that look like natural parts of the existing site. Preserve the current design, reuse the existing components and animations, make only necessary changes to the treatment links, and verify the full website after implementation.
